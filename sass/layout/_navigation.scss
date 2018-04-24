@@ -1,0 +1,40 @@
+.navigation {
+    background-color: $color-primary-darkest;
+    font-size: 1.4rem;
+
+    &__box {
+        max-width: 120rem;
+        margin: 0 auto;
+    }
+
+    &__list {
+        list-style: none;
+        @include clearfix;
+    }
+
+    &__item {
+        display: block;
+        float: left;
+        position: relative;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            border-right: 1px solid $color-grey-light-2;
+            padding: 1em 2.5rem;
+        }
+
+        &:hover,
+        &--active {
+            background-color: $color-primary-darker;
+        }
+    }
+
+    
+}

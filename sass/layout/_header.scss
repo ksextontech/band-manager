@@ -1,0 +1,29 @@
+.header {
+    background-color: $color-white;;
+    color: $color-dark;
+
+    &__box {
+        max-width: 120rem;
+        margin: 0 auto;
+        @include clearfix;
+        padding: 0 2.5rem;
+    }
+
+    &__brand {
+        font-weight: 300;
+        letter-spacing: .2rem;
+        margin: 1.5rem 0;
+        float: left;
+    }
+
+    &__user {
+        font-size: 1.4rem;
+        float: right;
+        margin-top: 2rem;
+
+        & span {
+            color: $color-primary;
+        }
+    }
+
+}
