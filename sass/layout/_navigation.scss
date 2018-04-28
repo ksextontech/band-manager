@@ -7,23 +7,18 @@
         visibility: hidden;
         width: 2.5rem;
         position: absolute;
-        top: 2rem;
-        right: 2rem;
+        top: 1.65rem;
+        right: 1.65rem;
+        z-index: 500;
 
-        &:hover {
-            cursor: pointer;
-        }
-
-        &:hover &-line {
-            margin-bottom: .4rem;
-        }
+        &:hover { cursor: pointer; }
 
         &-line {
-            height: .2rem;
+            height: 3px;
             background-color: $color-black;
             width: 100%;
             display: block;
-            margin-bottom: .35rem;
+            margin-bottom: 4px;
             transition: all .2s;
         }
 
@@ -36,25 +31,22 @@
     }
 
     &__toggle--opened + &__box {
-        right: 0;
-        width: 100%;
-        // display: block;
-        // visibility: visible;
+        left: 0;
     }
 
     &__box {
         max-width: 120rem;
         margin: 0 auto;
-        transition: right .8s ease;
+        transition: left .5s ease-out;
         
         @media screen and (max-width: 45.625em) {
             & {
                 // default state with nav closed
-                position: fixed;
+                position: absolute;
                 top: 5rem;
                 width: 100%;
-                right: -100%;
-                box-shadow: 0 0 3rem rgba($color-black, .15);
+                left: -100%;
+                box-shadow: 1rem 0 3rem rgba($color-black, .15);
                 height: calc(100vh - 5rem);
                 // display: none;
                 // visibility: hidden;
@@ -70,7 +62,6 @@
     }
 
     &__item {
-        display: block;
         float: left;
         position: relative;
 
@@ -102,7 +93,7 @@
                 & {
                     border-right: none;
                     display: block;
-                    background-color: #0A81DC;
+                    background-color: $color-primary;
                 }
             }
         }
