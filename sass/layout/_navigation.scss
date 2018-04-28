@@ -2,9 +2,61 @@
     background-color: $color-primary-darkest;
     font-size: 1.4rem;
 
+    &__toggle {
+        display: none;
+        visibility: hidden;
+        width: 2.5rem;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:hover &-line {
+            margin-bottom: .4rem;
+        }
+
+        &-line {
+            height: .2rem;
+            background-color: $color-black;
+            width: 100%;
+            display: block;
+            margin-bottom: .35rem;
+            transition: all .2s;
+        }
+
+        @media screen and (max-width: 45.625em) {
+            & {
+                display: block;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__toggle--opened + &__box {
+        right: 0;
+        width: 100%;
+    }
+
     &__box {
         max-width: 120rem;
         margin: 0 auto;
+        transition: right .8s ease;
+        
+        @media screen and (max-width: 45.625em) {
+            & {
+                // default state with nav closed
+                position: absolute;
+                top: 0;
+                width: 100%;
+                right: -100%;
+                top: 5rem;
+                box-shadow: 0 0 3rem rgba($color-black, .15);
+                height: calc(100vh - 5rem);
+            }
+        }
     }
 
     &__list {
@@ -16,6 +68,18 @@
         display: block;
         float: left;
         position: relative;
+
+        &:hover .navigation__list--nested {
+            visibility: visible;
+        }
+
+        @media screen and (max-width: 45.625em) {
+            & {
+                display: block;
+                float: none;
+                width: 100%;
+            }
+        }
     }
 
     &__link {
@@ -28,6 +92,14 @@
             display: inline-block;
             border-right: 1px solid $color-grey-light-2;
             padding: 1em 2.5rem;
+
+            @media screen and (max-width: 45.625em) {
+                & {
+                    border-right: none;
+                    display: block;
+                    background-color: #0A81DC;
+                }
+            }
         }
 
         &:hover,
@@ -36,5 +108,42 @@
         }
     }
 
-    
+    &__list--nested {
+        position: absolute;
+        z-index: 500;
+        min-width: 23rem;
+        box-shadow: 0 0 1rem rgba($color-black, .25);
+        visibility: hidden;
+
+        @media screen and (max-width: 45.625em) {
+            z-index: 0;
+            width: 100%;
+            display: block;
+            box-shadow: none;
+            background-color: $color-white;
+            position: static;
+            visibility: visible;
+        }
+    }
+
+    &__list--nested &__item {
+        float: none;
+        width: 100%;
+    }
+
+    &__list--nested &__link {
+        &:link,
+        &:visited {
+            background-color: $color-white;
+            color: $color-black;
+            display: block;
+            border: none;
+
+        }
+
+        &:hover,
+        &--active {
+            background-color: rgba($color-black, .05);
+        }
+    }
 }

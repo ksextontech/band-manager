@@ -5,8 +5,8 @@
     &__box {
         max-width: 120rem;
         margin: 0 auto;
-        @include clearfix;
         padding: 0 2.5rem;
+        @include clearfix;
     }
 
     &__brand {
@@ -21,9 +21,15 @@
         float: right;
         margin-top: 2rem;
 
-        & span {
-            color: $color-primary;
+        @media screen and (max-width: 45.625em) {
+            & {
+                display: none;
+                visibility: hidden;
+            }
         }
     }
 
+    &__username {
+        color: $color-primary;
+    }
 }

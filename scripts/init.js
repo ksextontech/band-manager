@@ -1,0 +1,2 @@
+var bandManager = {};
+bandManager.navigationModule = {};
