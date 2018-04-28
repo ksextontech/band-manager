@@ -38,6 +38,8 @@
     &__toggle--opened + &__box {
         right: 0;
         width: 100%;
+        // display: block;
+        // visibility: visible;
     }
 
     &__box {
@@ -48,13 +50,16 @@
         @media screen and (max-width: 45.625em) {
             & {
                 // default state with nav closed
-                position: absolute;
-                top: 0;
+                position: fixed;
+                top: 5rem;
                 width: 100%;
                 right: -100%;
-                top: 5rem;
                 box-shadow: 0 0 3rem rgba($color-black, .15);
                 height: calc(100vh - 5rem);
+                // display: none;
+                // visibility: hidden;
+
+                z-index: 1000;
             }
         }
     }

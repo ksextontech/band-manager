@@ -10,45 +10,85 @@
     </head>
     <body>
         <div class="container">
+        
             <header class="header">
                 <div class="header__box">
                     <h1 class="header__brand">Band Manager</h1>
                     <span class="header__user">
-                        Hello, <span class="header__username">ksextonmusic</span>!
+                        Hello, <span>ksextonmusic</span>!
                     </span>
                 </div>
-                
+
                 <nav class="navigation">
+                    <div class="navigation__toggle navigation__toggle">
+                        <span class="navigation__toggle-line"></span>
+                        <span class="navigation__toggle-line"></span>
+                        <span class="navigation__toggle-line"></span>
+                    </div>
                     <div class="navigation__box">
                         <ul class="navigation__list">
                             <li class="navigation__item">
-                                <a href="/index.html" class="navigation__link navigation__link--active">Dashboard</a>
+                                <a href="index.html" class="navigation__link navigation__link--active">Dashboard</a>
                             </li>
                             <li class="navigation__item">
-                                <a href="/booking.html" class="navigation__link">Booking</a>
+                                <a href="booking.html" class="navigation__link">Booking</a>
+                                <ul class="navigation__list navigation__list--nested">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Add New Gig</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Check Availability</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="navigation__item">
                                 <a href="#" class="navigation__link">Events</a>
+                                <ul class="navigation__list navigation__list--nested">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Add New Event</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="navigation__item">
                                 <a href="#" class="navigation__link">Repertoire</a>
+                                <ul class="navigation__list navigation__list--nested">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Add New Song</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="navigation__item">
-                                <a href="#" class="navigation__link">Membership</a>
+                                <a href="#" class="navigation__link">Admin</a>
+                                <ul class="navigation__list navigation__list--nested">
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Band Members</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Subcontractors</a>
+                                    </li>
+                                    <li class="navigation__item">
+                                        <a href="#" class="navigation__link">Band Formats</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
                 </nav>
 
             </header>
+
             <main class="content">
                 <div class="content__box">
 
                 </div>
             </main>
+            
             <footer class="footer">
-
+                
             </footer>
         </div>
+
+        <script src="scripts/init.js"></script>
+        <script src="scripts/navigation.js"></script>
     </body>
 </html>
